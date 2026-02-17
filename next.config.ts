@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
+import { turborepoTraceAccess } from "next/dist/build/turborepo-access-trace";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactCompiler: true,
+  experimental: {
+    turbopackFileSystemCacheForBuild: true,
+  },
 };
 
 export default nextConfig;
